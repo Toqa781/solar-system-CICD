@@ -1,0 +1,34 @@
+name: solar system workflow
+
+on:
+    push:
+        branches:
+            main
+
+env:
+    MONGO_URI: ${{vars.MONGO_URI}}
+    MONGO_USERNAME: ${{vars.MONGO_USERNAME}}
+    MONGO_PASSWORD: ${{secrets.MONGO_PASSWORD}}
+
+jobs:
+    unit-testing:
+        name: Unit Testing
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v5.0.0
+        
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v4.4.0
+              with:
+                node-version: 18
+            
+            - name: Install Dependencines
+              run: npm install
+
+            - name: Run Unit Testing
+              run: npm test
+
+    
+
+            
