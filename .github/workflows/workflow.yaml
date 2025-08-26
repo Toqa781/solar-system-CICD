@@ -38,7 +38,7 @@ jobs:
     code-coverage:
         name: Code Coverage
         needs: unit-testing
-        runs-on: ubunu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: checkout repo
               uses: actions/checkout@v5.0.0
