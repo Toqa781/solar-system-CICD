@@ -15,7 +15,6 @@ The project is based on the [Sidd-Harth Solar System app](https://github.com/sid
 - [Environment Variables](#environment-variables)
 - [Running Locally](#running-locally)
 - [Deployment](#deployment)
-- [Future Improvements](#future-improvements)
 
 ---
 
