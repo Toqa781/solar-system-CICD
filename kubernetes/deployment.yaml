@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solar-system-cicd-deploymet
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: solar-system-cicd-pod
+  template:
+    metadata:
+      labels:
+        app: solar-system-cicd-pod
+    spec:
+      containers:
+      - name: solar-system-cicd-pod
+        image: toqaabdalla/solar-system2
+        ports:
+        - containerPort: 3000
