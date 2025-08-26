@@ -96,6 +96,13 @@ jobs:
               echo "Testing /live endpoint"
               wget -q -O - http://127.0.0.1:3000/live | grep live
 
+          - name: Docker Push
+            uses: docker/build-push-action@v4
+            with:
+              context: .
+              push: true                    # enable push to registry
+              tags: ${{ vars.DOCKERHUB_USERNAME }}/solar-system:${{ github.sha }}
+
   
 
             
