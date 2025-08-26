@@ -51,9 +51,9 @@ jobs:
             - name: Install Dependencines
               run: npm install
 
-            - name: Generte coverage report
+            - name: Check Code Coverage
               continue-on-error: true
-              run: npm coverage
+              run: npm run coverage
 
             - name: Archive coverage report
               uses: actions/upload-artifact@v4.6.2
