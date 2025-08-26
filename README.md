@@ -115,7 +115,7 @@ The project requires the following environment variables:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/solar-system-CICD.git
+git clone https://github.com/Toqa781/solar-system-CICD.git
 cd solar-system-CICD
 ```
 
